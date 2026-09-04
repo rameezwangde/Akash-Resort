@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
@@ -10,12 +10,20 @@ import Rooms from './pages/Rooms';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 
-// Scroll to top helper on route change
+// Scroll to top helper & SPA redirect handler
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
+  const navigate = useNavigate();
+
   useEffect(() => {
+    // Handle SPA query redirects (e.g. from 404.html on GitHub Pages)
+    if (search.startsWith('?/')) {
+      const redirectPath = search.slice(2).replace(/&/g, '?');
+      navigate(redirectPath, { replace: true });
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, search, navigate]);
+
   return null;
 }
 
@@ -43,6 +51,7 @@ export default function App() {
             <Route path="/rooms" element={<Rooms onOpenBooking={handleOpenBooking} />} />
             <Route path="/gallery" element={<Gallery onOpenBooking={handleOpenBooking} />} />
             <Route path="/contact" element={<Contact onOpenBooking={handleOpenBooking} />} />
+            <Route path="*" element={<Home onOpenBooking={handleOpenBooking} />} />
           </Routes>
         </main>
 
