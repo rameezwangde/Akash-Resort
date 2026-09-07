@@ -96,7 +96,7 @@ export default function About({ onOpenBooking }) {
           >
             <div className="relative rounded-2xl overflow-hidden border border-resort-gold/30 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80"
+                src="/images/IMG_6879.jpg"
                 alt="Akash Resort Story Architecture"
                 className="w-full h-[400px] sm:h-[480px] object-cover"
               />

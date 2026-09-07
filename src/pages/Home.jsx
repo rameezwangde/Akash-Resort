@@ -252,8 +252,8 @@ export default function Home({ onOpenBooking }) {
           >
             <div className="relative rounded-2xl overflow-hidden border border-resort-gold/30 shadow-2xl group">
               <img
-                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80"
-                alt="Akash Resort Poolside Landscape"
+                src="/images/IMG_6881.jpg"
+                alt="Panoramic View from Balcony"
                 className="w-full h-[400px] sm:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-resort-warmBlack via-transparent to-transparent opacity-60" />
@@ -262,8 +262,8 @@ export default function Home({ onOpenBooking }) {
             {/* Overlapping Floating Small Image Card */}
             <div className="absolute -bottom-8 -left-6 sm:-left-8 w-48 sm:w-64 rounded-xl overflow-hidden border-2 border-resort-gold shadow-2xl hidden sm:block">
               <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
-                alt="Resort Detail"
+                src="/images/IMG_6882.jpg"
+                alt="A-Frame Luxury Wooden Cabin"
                 className="w-full h-36 sm:h-44 object-cover"
               />
             </div>

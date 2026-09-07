@@ -24,29 +24,29 @@ export const resortExperiences = [
     id: "stay",
     title: "STAY",
     subtitle: "Comfortable spaces created for relaxing getaways.",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/IMG_6882.jpg",
     description: "Immerse yourself in serenity with thoughtfully appointed rooms offering plush linens, private balconies, and soothing natural decor."
   },
   {
     id: "relax",
     title: "RELAX",
     subtitle: "Slow down beside peaceful surroundings and beautiful landscapes.",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
-    description: "Lounge by our crystal-clear infinity pool, take tranquil morning walks through lush gardens, and inhale the fresh country breeze."
+    image: "/images/IMG_6885.jpg",
+    description: "Lounge by our upper sit-out deck, take tranquil morning walks through lush gardens, and inhale the fresh country breeze."
   },
   {
     id: "celebrate",
     title: "CELEBRATE",
     subtitle: "Create unforgettable memories with friends and family.",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80",
-    description: "From intimate family gatherings to grand sunset celebrations, our versatile event spaces craft moments to cherish forever."
+    image: "/images/IMG_6880.jpg",
+    description: "From intimate gatherings to fun evening recreation and billiards games, our versatile spaces craft moments to cherish forever."
   },
   {
     id: "explore",
     title: "EXPLORE",
     subtitle: "Experience the natural beauty surrounding Channapatna and Kanva Dam.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-    description: "Venture out to Kanva Dam for breathtaking lake views, bird watching, and gentle nature trails right around our resort grounds."
+    image: "/images/IMG_6881.jpg",
+    description: "Venture out to Kanva Dam for breathtaking lake views, camping under the trees, and gentle nature trails right around our resort grounds."
   }
 ];
 
