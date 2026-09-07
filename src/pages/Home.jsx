@@ -508,9 +508,7 @@ export default function Home({ onOpenBooking }) {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className={`relative rounded-2xl overflow-hidden border border-resort-gold/20 group h-64 sm:h-80 ${
-                  idx === 0 || idx === 3 ? 'sm:col-span-2' : ''
-                }`}
+                className="relative rounded-2xl overflow-hidden border border-resort-gold/20 group h-72 sm:h-80 w-full"
               >
                 <img
                   src={imgItem.image}

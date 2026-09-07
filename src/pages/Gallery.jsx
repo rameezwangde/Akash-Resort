@@ -10,7 +10,7 @@ export default function Gallery({ onOpenBooking }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  const categories = ['ALL', 'RESORT', 'ROOMS', 'POOL', 'NATURE', 'DINING', 'CELEBRATIONS'];
+  const categories = ['ALL', 'RESORT', 'ROOMS', 'CAMPING', 'NATURE', 'ACTIVITIES', 'DINING'];
 
   const filteredImages = activeCategory === 'ALL'
     ? galleryImages
@@ -103,9 +103,7 @@ export default function Gallery({ onOpenBooking }) {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
                 onClick={() => openLightbox(idx)}
-                className={`relative rounded-2xl overflow-hidden border border-resort-gold/20 hover:border-resort-gold cursor-pointer group shadow-xl ${
-                  img.aspect === 'tall' ? 'h-[420px]' : img.aspect === 'wide' ? 'h-64 sm:h-72' : 'h-80'
-                }`}
+                className="relative rounded-2xl overflow-hidden border border-resort-gold/20 hover:border-resort-gold cursor-pointer group shadow-xl h-72 sm:h-80 w-full"
               >
                 <img
                   src={img.image}

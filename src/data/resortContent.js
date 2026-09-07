@@ -168,66 +168,101 @@ export const testimonials = [
 export const galleryImages = [
   {
     id: 1,
-    title: "Evening Poolside Glow",
-    category: "POOL",
-    image: "/images/hero-bg.png",
-    aspect: "tall"
-  },
-  {
-    id: 2,
-    title: "Deluxe Suite Bedding",
-    category: "ROOMS",
-    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80",
+    title: "Panoramic View from Balcony",
+    category: "NATURE",
+    image: "/images/IMG_6881.jpg",
     aspect: "wide"
   },
   {
-    id: 3,
-    title: "Kanva Dam Sunset Horizon",
-    category: "NATURE",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
-    aspect: "square"
-  },
-  {
-    id: 4,
-    title: "Tropical Resort Lawns",
-    category: "RESORT",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80",
+    id: 2,
+    title: "A-Frame Luxury Wooden Cabin",
+    category: "ROOMS",
+    image: "/images/IMG_6882.jpg",
     aspect: "tall"
   },
   {
+    id: 3,
+    title: "Cozy A-Frame Bedroom & Loft",
+    category: "ROOMS",
+    image: "/images/IMG_6877.jpg",
+    aspect: "tall"
+  },
+  {
+    id: 4,
+    title: "Upper Deck Triangle Window View",
+    category: "ROOMS",
+    image: "/images/IMG_6878.jpg",
+    aspect: "wide"
+  },
+  {
     id: 5,
-    title: "Al Fresco Resort Dining",
-    category: "DINING",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80",
+    title: "Private Villa Glass Front Entrance",
+    category: "RESORT",
+    image: "/images/IMG_6879.jpg",
     aspect: "wide"
   },
   {
     id: 6,
-    title: "Garden Celebration Setup",
-    category: "CELEBRATIONS",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80",
-    aspect: "wide"
-  },
-  {
-    id: 7,
-    title: "Private Villa Balcony View",
-    category: "ROOMS",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80",
-    aspect: "square"
-  },
-  {
-    id: 8,
-    title: "Illuminated Water Cascade",
+    title: "Resort Walkways & Cottage Stays",
     category: "RESORT",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/IMG_6648.jpg",
     aspect: "tall"
   },
   {
-    id: 9,
-    title: "Morning Sun on Infinity Edge",
-    category: "POOL",
-    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1000&q=80",
+    id: 7,
+    title: "Recreation & Billiards Lounge",
+    category: "ACTIVITIES",
+    image: "/images/IMG_6880.jpg",
     aspect: "wide"
+  },
+  {
+    id: 8,
+    title: "Camp Stays in Nature Orchards",
+    category: "CAMPING",
+    image: "/images/IMG_6883.jpg",
+    aspect: "wide"
+  },
+  {
+    id: 9,
+    title: "Lush Greenery & Camping Tents",
+    category: "CAMPING",
+    image: "/images/IMG_6884.jpg",
+    aspect: "wide"
+  },
+  {
+    id: 10,
+    title: "Upper Balcony Sit-out & Pergola",
+    category: "RESORT",
+    image: "/images/IMG_6885.jpg",
+    aspect: "wide"
+  },
+  {
+    id: 11,
+    title: "Fresh South Indian Breakfast & Dining",
+    category: "DINING",
+    image: "/images/IMG_6886.jpg",
+    aspect: "wide"
+  },
+  {
+    id: 12,
+    title: "Spacious En-suite Bathroom",
+    category: "ROOMS",
+    image: "/images/IMG_6689.jpg",
+    aspect: "tall"
+  },
+  {
+    id: 13,
+    title: "Modern Attached Bath Facility",
+    category: "ROOMS",
+    image: "/images/IMG_6690.jpg",
+    aspect: "tall"
+  },
+  {
+    id: 14,
+    title: "Evening Stays & Bedroom Comfort",
+    category: "ROOMS",
+    image: "/images/IMG_6876.jpg",
+    aspect: "tall"
   }
 ];
 
