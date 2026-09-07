@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -17,7 +17,10 @@ import {
   Trees,
   Coffee,
   Mountain,
-  Star
+  Star,
+  Play,
+  Film,
+  X
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
@@ -29,11 +32,14 @@ import {
   amenitiesList,
   whyAkashItems,
   testimonials,
-  galleryImages
+  galleryImages,
+  resortVideos,
+  faqList
 } from '../data/resortContent';
 
 export default function Home({ onOpenBooking }) {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [selectedHomeVideo, setSelectedHomeVideo] = useState(null);
 
   const iconMap = {
     Leaf: <Leaf size={24} className="text-resort-gold stroke-[1.5]" />,
@@ -529,6 +535,71 @@ export default function Home({ onOpenBooking }) {
       </section>
 
       {/* ============================================================ */}
+      {/* 07B. EXPERIENCE IN MOTION / VIDEO REELS                      */}
+      {/* ============================================================ */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="space-y-2">
+            <span className="text-xs uppercase tracking-ultra text-resort-gold font-medium">
+              VIRTUAL RESORT TOURS
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-serif font-bold text-resort-warmWhite uppercase">
+              EXPERIENCE IN MOTION
+            </h2>
+          </div>
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-ultra text-resort-gold hover:text-resort-goldLight transition-colors font-medium border-b border-resort-gold/50 pb-1"
+          >
+            EXPLORE ALL REELS & TOURS →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {resortVideos.map((vid, idx) => (
+            <motion.div
+              key={vid.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              onClick={() => setSelectedHomeVideo(vid)}
+              className="group relative rounded-2xl overflow-hidden border border-resort-gold/30 hover:border-resort-gold transition-all duration-300 shadow-xl cursor-pointer bg-resort-charcoal/40 flex flex-col h-[360px]"
+            >
+              <div className="relative flex-1 overflow-hidden">
+                <img
+                  src={vid.poster}
+                  alt={vid.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-resort-warmBlack via-resort-warmBlack/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-resort-gold/90 group-hover:bg-resort-gold text-resort-warmBlack flex items-center justify-center shadow-gold-glow group-hover:scale-110 transition-transform duration-300">
+                    <Play size={24} className="fill-resort-warmBlack ml-1" />
+                  </div>
+                </div>
+
+                <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-resort-warmBlack/80 border border-resort-gold/40 text-[10px] uppercase font-bold tracking-widest text-resort-gold flex items-center gap-1.5">
+                  <Film size={11} />
+                  {vid.duration}
+                </div>
+              </div>
+
+              <div className="p-4 bg-resort-charcoal/90 border-t border-resort-gold/20 space-y-1">
+                <h4 className="font-serif text-base font-bold text-resort-warmWhite group-hover:text-resort-gold transition-colors line-clamp-1">
+                  {vid.title}
+                </h4>
+                <p className="text-xs text-resort-ivory/70 line-clamp-2 leading-relaxed">
+                  {vid.subtitle}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ============================================================ */}
       {/* 08. WHY AKASH                                                */}
       {/* ============================================================ */}
       <section className="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto">
@@ -632,6 +703,51 @@ export default function Home({ onOpenBooking }) {
       {/* 10. HOME CTA                                                 */}
       {/* ============================================================ */}
       <CTASection onOpenBooking={onOpenBooking} />
+
+      {/* VIDEO PLAYER MODAL */}
+      <AnimatePresence>
+        {selectedHomeVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedHomeVideo(null)}
+              className="absolute top-6 right-6 p-3 rounded-full bg-resort-charcoal border border-resort-gold/40 text-resort-ivory hover:text-resort-gold transition-colors z-20"
+            >
+              <X size={26} />
+            </button>
+
+            <div className="max-w-4xl w-full flex flex-col items-center justify-center space-y-4">
+              <motion.div
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                className="w-full rounded-2xl overflow-hidden border border-resort-gold/40 shadow-2xl bg-black"
+              >
+                <video
+                  src={selectedHomeVideo.video}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="w-full max-h-[75vh] object-contain mx-auto"
+                />
+              </motion.div>
+
+              <div className="text-center space-y-1">
+                <h3 className="font-serif text-2xl font-bold text-resort-gold">
+                  {selectedHomeVideo.title}
+                </h3>
+                <p className="text-xs text-resort-ivory/80 max-w-lg mx-auto">
+                  {selectedHomeVideo.subtitle}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

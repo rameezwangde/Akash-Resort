@@ -266,6 +266,41 @@ export const galleryImages = [
   }
 ];
 
+export const resortVideos = [
+  {
+    id: "vid-1",
+    title: "Resort Grounds & Scenic Walkthrough",
+    subtitle: "Experience the tranquility and lush natural surroundings of Akash Lavish Resort.",
+    video: "/videos/resort-tour-1.mp4",
+    poster: "/images/IMG_6648.jpg",
+    duration: "Tour"
+  },
+  {
+    id: "vid-2",
+    title: "A-Frame Cottage & Loft Experience",
+    subtitle: "A step inside our signature wooden A-frame stay and peaceful upper deck.",
+    video: "/videos/resort-tour-2.mp4",
+    poster: "/images/IMG_6882.jpg",
+    duration: "Cottage"
+  },
+  {
+    id: "vid-3",
+    title: "Kanva Nature & Balcony Atmosphere",
+    subtitle: "Catching the serene breezes and rolling green views from the upper terrace.",
+    video: "/videos/resort-tour-3.mp4",
+    poster: "/images/IMG_6881.jpg",
+    duration: "Atmosphere"
+  },
+  {
+    id: "vid-4",
+    title: "Recreation & Evening Leisure",
+    subtitle: "Fun times at the billiards lounge and garden recreation zones.",
+    video: "/videos/resort-tour-4.mp4",
+    poster: "/images/IMG_6880.jpg",
+    duration: "Recreation"
+  }
+];
+
 export const faqList = [
   {
     q: "Where is Akash Lavish Resort located?",
